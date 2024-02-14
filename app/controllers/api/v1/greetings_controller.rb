@@ -1,8 +1,8 @@
-class Api::V1::MessagesController < ApplicationController
+class Api::V1::GreetingsController < ApplicationController
   before_action :set_default_format
 
   def index
-    @message = Message.order('RANDOM()').first
+    @greeting = Greeting.order('RANDOM()').first
   end
 
   private
